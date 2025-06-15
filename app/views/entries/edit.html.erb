@@ -17,5 +17,14 @@
             <%= form.text_field(:password, placeholder: "Password", class: "form-control") %>
             <%= form.label(:password, class: "fw-bold text-dark") %>
         </div>
+
+        <div class="entry-edit-actions">
+            <%= form.button(class: "btn btn-sm btn-outline-success rounded-circle") do %>
+                <i class="bi bi-check-lg"></i>
+            <% end %>
+            <%= link_to(entry_path(@entry), class: "btn btn-sm btn-outline-danger rounded-circle") do %>
+                <i class="bi bi-x-lg"></i>
+            <% end %>
+        </div>
     <% end %>
 <% end %>

@@ -32,7 +32,7 @@
                 <li id="entry-username" class="list-group-item">
                     <%= turbo_frame_tag(:entry_username) do %>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-floating">
+                            <div class="form-floating w-100">
                                 <%= text_field_tag(:username, entry.username, readonly: true, class: "form-control-plaintext", placeholder: "email") %>
                                 <%= label_tag(:username, "Username", class: "fw-bold text-dark") %>
                             </div>
@@ -48,7 +48,7 @@
                 <li id=entry-password class="list-group-item">
                     <%= turbo_frame_tag(:entry_password) do %>
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-floating">
+                            <div class="form-floating w-100">
                                 <%= text_field_tag(:password, entry.password, readonly: true, class: "form-control-plaintext", placeholder: "email") %>
                                 <%= label_tag(:password, "Password", class: "fw-bold text-dark") %>
                             </div>
@@ -63,10 +63,10 @@
                 </li>
             </ul>
 
-            <div id="entry-url">
+            <div id="entry-url" class="mt-4">
                 <%= turbo_frame_tag(:entry_url) do %>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="flex-grow-1 mt-4 ms-4 ps-1">
+                        <div class="flex-grow-1  ms-4 ps-1">
                             <div class="fw-bold">URL</div>
 
                             <%= link_to(entry.url, target: :_blank, rel: "noopener noreferrer") do %>
