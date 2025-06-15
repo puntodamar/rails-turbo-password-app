@@ -21,7 +21,8 @@ class EntriesController < ApplicationController
     end
 
     def index
-        @entries = current_user.entries.order(:name)
+        @entries = current_user.entries.search(params)
+        p @entries
         @main_entry = @entries.first
     end
 

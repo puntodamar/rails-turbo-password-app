@@ -15,4 +15,17 @@ class Entry < ApplicationRecord
             errors.add(:url, :invalid)  # will use your locale “invalid” message
         end
     end
+
+    def self.search(params)
+        data = self
+        if params.present?
+            if params["name"].present?
+                data = self.where("name ILIKE :name", name: "%#{params[:name]}%")
+            end
+        else
+            data = self.all
+        end
+
+        data.order(:name)
+    end
 end

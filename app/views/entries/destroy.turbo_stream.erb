@@ -6,7 +6,7 @@
         <% if current_user.entries.any? %>
             <%= render(partial: "entries/main", locals: {entry: current_user.entries.order(:name)}) %>
         <% else %>
-            <%= render(html: content_tag(:nil, "No Entries", class: "h-100 d-flex align-items-center justify-content-center")) %>
+            <%= render(html: content_tag(:nil, "No Entries", class: "h-100 w-100 d-flex align-items-center justify-content-center")) %>
         <% end %>
     <% end %>
 <% end %>
