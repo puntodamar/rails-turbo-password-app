@@ -64,3 +64,6 @@ end
 gem "devise", "~> 4.9"
 gem "dotenv"
 gem "jwt"
+# Gemfile
+gem 'rack-cors', require: 'rack/cors'
+
